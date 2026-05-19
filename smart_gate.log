@@ -1,0 +1,20 @@
+2026-05-06 19:24:19,352 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-06 19:24:19,385 - INFO - Conexión a la base de datos establecida.
+2026-05-06 19:24:19,441 - WARNING - No se encontró trainer.yml, el sistema funcionará en modo detección.
+2026-05-06 19:24:20,299 - INFO - Sistema Smart-Gate activo...
+2026-05-06 19:24:33,983 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-06 19:24:33,999 - INFO - Conexión a la base de datos establecida.
+2026-05-06 19:24:34,047 - WARNING - No se encontró trainer.yml, el sistema funcionará en modo detección.
+2026-05-06 19:24:34,681 - INFO - Sistema Smart-Gate activo...
+2026-05-06 19:28:29,499 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-06 19:28:29,500 - INFO - Conexión a la base de datos establecida.
+2026-05-06 19:28:29,528 - WARNING - No se encontró trainer.yml, el sistema funcionará en modo detección.
+2026-05-06 19:28:29,999 - INFO - Sistema Smart-Gate activo...
+2026-05-06 19:33:03,018 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-06 19:33:03,019 - INFO - Conexión a la base de datos establecida.
+2026-05-06 19:33:03,054 - WARNING - No se encontró trainer.yml, el sistema funcionará en modo detección.
+2026-05-06 19:33:03,651 - INFO - Sistema Smart-Gate activo...
+2026-05-06 20:00:26,859 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-06 20:00:26,863 - INFO - Conexión a la base de datos establecida.
+2026-05-06 20:00:27,033 - INFO - Modelo LBPH cargado correctamente.
+2026-05-06 20:00:27,647 - INFO - Sistema Smart-Gate activo...
