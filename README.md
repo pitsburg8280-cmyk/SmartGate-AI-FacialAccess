@@ -63,9 +63,10 @@ b.	- Librerías: OpenCV, SQLite3/MySQL, Tkinter
 c.	- Algoritmos: Haar Cascades y LBPH  
 
 8.2 Modelo Entidad-Relación (DER)
+![Diagrama Entidad-Relación](der.png) 
 
-Figura 1: Modelo Entidad-Relacion simplificado de Smart-Gate.
 8.3 Diagrama de Clases UML
+![Diagrama UML](uml.png)
 
 Figura 2: Diagrama UML simplificado del sistema Smart-Gate.
 Ejemplos CRUD
