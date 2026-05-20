@@ -18,3 +18,25 @@
 2026-05-06 20:00:26,863 - INFO - Conexión a la base de datos establecida.
 2026-05-06 20:00:27,033 - INFO - Modelo LBPH cargado correctamente.
 2026-05-06 20:00:27,647 - INFO - Sistema Smart-Gate activo...
+2026-05-19 18:33:26,346 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-19 18:33:26,348 - INFO - Conexión a la base de datos establecida.
+2026-05-19 18:33:26,429 - INFO - Modelo LBPH cargado correctamente.
+2026-05-19 18:33:26,861 - INFO - Sistema Smart-Gate activo...
+2026-05-19 18:34:23,598 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-19 18:34:23,600 - INFO - Conexión a la base de datos establecida.
+2026-05-19 18:34:23,694 - INFO - Modelo LBPH cargado correctamente.
+2026-05-19 18:34:24,047 - INFO - Sistema Smart-Gate activo...
+2026-05-19 18:34:35,803 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-19 18:34:35,804 - INFO - Conexión a la base de datos establecida.
+2026-05-19 18:34:35,867 - INFO - Modelo LBPH cargado correctamente.
+2026-05-19 18:34:36,152 - INFO - Sistema Smart-Gate activo...
+2026-05-19 19:16:21,589 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-19 19:16:21,595 - INFO - Conexión a la base de datos establecida.
+2026-05-19 19:16:21,993 - INFO - Modelo LBPH cargado correctamente.
+2026-05-19 19:16:22,609 - INFO - Sistema Smart-Gate activo...
+2026-05-19 19:59:23,080 - ERROR - Error al cargar configuración: [Errno 2] No such file or directory: 'config.json'
+2026-05-19 19:59:23,090 - INFO - Conexión a la base de datos establecida.
+2026-05-19 19:59:23,431 - INFO - Modelo LBPH cargado correctamente.
+2026-05-19 19:59:24,170 - INFO - Sistema Smart-Gate activo...
+2026-05-19 19:59:28,744 - INFO - Botón de salida activado.
+2026-05-19 19:59:29,297 - INFO - Cámara cerrada y recursos liberados.

@@ -49,6 +49,7 @@ class SmartGate:
             logging.warning("No se encontró trainer.yml, el sistema funcionará en modo detección.")
 
         self.last_access_time = {}
+        self.salir = False  # bandera para botón de salida
 
     def _crear_tablas(self):
         self.cursor.execute("""CREATE TABLE IF NOT EXISTS usuarios (
@@ -111,13 +112,31 @@ class SmartGate:
                 cv2.putText(frame, f"{nombre_usuario} ({int(confidence)})", (x, y-10),
                             cv2.FONT_HERSHEY_SIMPLEX, 0.8, color, 2)
 
+            # Dibujar botón "Salir"
+            cv2.rectangle(frame, (10, 10), (100, 50), (0, 0, 255), -1)
+            cv2.putText(frame, "Salir", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255,255,255), 2)
+
             cv2.imshow("Smart-Gate: Control de Acceso", frame)
 
+            # Detectar tecla 'q'
             if cv2.waitKey(1) & 0xFF == ord("q"):
+                break
+
+            # Detectar clic en el botón
+            cv2.setMouseCallback("Smart-Gate: Control de Acceso", self.click_event)
+
+            if self.salir:
                 break
 
         cap.release()
         cv2.destroyAllWindows()
+        logging.info("Cámara cerrada y recursos liberados.")
+
+    def click_event(self, event, x, y, flags, param):
+        if event == cv2.EVENT_LBUTTONDOWN:
+            if 10 <= x <= 100 and 10 <= y <= 50:
+                logging.info("Botón de salida activado.")
+                self.salir = True
 
     def _intentar_log(self, user_id, estado):
         ahora = time.time()
@@ -142,15 +161,21 @@ def entrenar_modelo(dataset_path="dataset", trainer_path="trainer.yml"):
             if file.endswith("jpg"):
                 path = os.path.join(root, file)
                 img = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-                id_usuario = int(file.split("_")[0])  # Ejemplo: "1_usuario.jpg"
-                faces.append(img)
-                ids.append(id_usuario)
+                try:
+                    id_usuario = int(file.split(".")[1])  # formato usuario.ID.n.jpg
+                    faces.append(img)
+                    ids.append(id_usuario)
+                except Exception as e:
+                    logging.warning(f"Archivo ignorado: {file} ({e})")
 
-    recognizer.train(faces, np.array(ids))
-    recognizer.write(trainer_path)
-    print("✅ Modelo entrenado y guardado en trainer.yml")
+    if faces:
+        recognizer.train(faces, np.array(ids))
+        recognizer.write(trainer_path)
+        print("✅ Modelo entrenado y guardado en trainer.yml")
+    else:
+        print("[ERROR] No se encontraron imágenes válidas para entrenamiento.")
 
-# --- BLOQUE MAIN PARA ENTRENAMIENTO ---
+# --- BLOQUE MAIN ---
 if __name__ == "__main__":
     gate = SmartGate()
     gate.procesar_video()
